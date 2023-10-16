@@ -143,7 +143,6 @@ let ecomData = [
     price: "2012",
     count: 0,
   },
-
   //JEANS FOR WOMAN
   {
     id: 17,
@@ -386,7 +385,7 @@ let ecomData = [
     id: 43,
     image:
       "https://denverformen.com/cdn/shop/products/2_0ec34cbf-34f8-4f00-8224-c2a8a6abba4a_800x.jpg?v=1696932709",
-    brandName: "denver",
+    brandName: "denver (sharukha khan brand)",
     type: "perfume",
     price: "525",
     count: 0,

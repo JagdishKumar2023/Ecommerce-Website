@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./data.jss"></script>
   </head>
   <body>
     <div class="container">
-      <div class="container_items"></div>
+      <div id="container_items"></div>
     </div>
   </body>
 </html>
@@ -15,6 +17,51 @@
   import { ecomData } from "./data.js";
 
   ecomData.map(function (ele, idx, array) {
+    let container_items = document.getElementById("container_items");
+
     let cards = document.createElement("div");
+    cards.setAttribute("class", "cards");
+
+    let contentDiv = document.createElement("div");
+    contentDiv.setAttribute("class", "contentDiv");
+
+    let imgDiv = document.createElement("div");
+    imgDiv.setAttribute("class", "imgDiv");
+
+    let imgTag = document.createElement("img");
+    imgTag.setAttribute("src", ele.image);
+
+    imgDiv.append(imgTag);
+
+    let brandName = document.createElement("h2");
+    brandName.innerText = ele.brandName;
+    brandName.setAttribute("class", "brandName");
+
+    let type = document.createElement("h4");
+    type.innerText = ele.type;
+    type.setAttribute("class", "type");
+
+    let price = document.createElement("p");
+    price.innerText = ele.price;
+    price.setAttribute("class", "price");
+
+    let addToCart = document.createElement("button");
+    addToCart.innerText = "Add";
+    addToCart.setAttribute("class", "addButton");
+
+    let wishlistBtn = document.createElement("button");
+    wishlistBtn.setAttribute("class", "wishlist");
+    wishlistBtn.innerText = "❤️";
+
+    let btnDiv = document.createElement("div");
+    btnDiv.setAttribute("class", "btnDiv");
+
+    btnDiv.append(wishlistBtn, addToCart);
+
+    contentDiv.append(brandName, type, price, btnDiv);
+
+    cards.append(imgDiv, contentDiv);
+
+    container_items.append(cards);
   });
 </script>
