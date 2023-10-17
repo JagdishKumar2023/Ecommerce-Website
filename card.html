@@ -23,6 +23,8 @@
 </html>
 
 <script>
+  let container = document.getElementById("container");
+
   let box = document.getElementById("box");
 
   // let card = document.createElement("div");
@@ -38,8 +40,14 @@
 
   let price = document.createElement("h3");
   price.innerText = "400";
-  pricer.setAttribute("class", "price");
+  price.setAttribute("class", "price");
 
   let addbtn = document.createElement("button");
-  addbtn.setAttribute("addbtn");
+  addbtn.innerHTML = "Add";
+  addbtn.setAttribute("class", "addbtn");
+
+  box.append(brandName, type, price, addbtn);
+
+  brandName.append(type);
+  price.append(addbtn);
 </script>

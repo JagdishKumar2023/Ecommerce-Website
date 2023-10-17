@@ -2,8 +2,45 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background-color: aqua; */
 }
 
 .brand {
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  font-size: 20px;
+  height: 200x;
+  font-size: 40px;
+}
+
+.type {
+  /* border: 2px solid black; */
+  height: 60px;
+  font-size: 40px;
+}
+
+.price {
+  font-size: 30px;
+  /* border: 2px solid green; */
+  height: 20px;
+}
+
+.addbtn {
+  border: 2px solid greenyellow;
+  /* height: 70px; */
+  /* width: 40px; */
+  display: flex;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px;
+  /* color: blueviolet; */
+  background-color: brown;
+  border-radius: 10px;
+  color: white;
+}
+
+.addbtn:hover {
+  background-color: aqua;
+  transition: 0.5s;
+  color: black;
 }
