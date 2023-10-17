@@ -3,7 +3,7 @@ let ecomData = [
   {
     id: 1,
     image:
-      "https://www.chimpwear.com/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/m/u/mumbai-open-mens-1.jpg",
+      "https://lowpricesaree.in/wp-content/uploads/2022/01/hrx-by-hrithik-roshan-ultralyte-men-black-running-t-shirt.jpg",
     brandName: "HRX",
     type: "T-shirt",
     price: "599",
@@ -375,7 +375,7 @@ let ecomData = [
   {
     id: 42,
     image:
-      "https://bellavitaorganic.com/cdn/shop/files/DATEWOMAN.jpg?v=1693290911&width=416",
+      "https://bellavitaorganic.com/cdn/shop/files/DATEWOMAN.jpg?v=1693290911&width=416https://www.netmeds.com/images/product-v1/600x600/1049354/bella_vita_organic_luxury_perfumes_gift_set_men_4_x_20_ml_80_ml_431279_7_0.jpg",
     brandName: "bella vita",
     type: "perfume",
     price: "515",
@@ -390,15 +390,15 @@ let ecomData = [
     price: "525",
     count: 0,
   },
-  {
-    id: 44,
-    images:
-      "https://bellavitaorganic.com/cdn/shop/files/Skai_2e0d54be-3ab0-458b-a2af-47d666c93e0e.jpg?v=1693289226",
-    brandName: "bella vita",
-    type: "perfume",
-    price: "449",
-    count: 0,
-  },
+  // {
+  //   id: 44,
+  //   images:
+  //     "https://bellavitaluxury.co.in/cdn/shop/products/CEOMAN-05_e036500c-95d6-4381-9180-36eec7a2eae7.jpg?v=1696231846&width=1946",
+  //   brandName: "bella vita",
+  //   type: "perfume",
+  //   price: "449",
+  //   count: 0,
+  // },
   {
     id: 45,
     image:

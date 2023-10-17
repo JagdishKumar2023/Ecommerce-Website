@@ -70,4 +70,11 @@ img {
   border-color: blue;
   cursor: pointer;
   /* margin: 10px 0; */
+  border-radius: 10px;
+}
+
+.addButton:hover {
+  background-color: white;
+  transition: 0.5s;
+  color: black;
 }

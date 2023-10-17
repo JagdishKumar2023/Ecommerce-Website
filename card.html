@@ -8,16 +8,38 @@
   </head>
   <body>
     <div class="container">
-      <div class="box">
+      <div id="box">
         <img
           src="https://i1.adis.ws/i/lucky/7W15822_420_3/LUCKY-LEGEND-MID-RISE-BOY-420?sm=aspect&aspect=2:3&w=437&qlt=100"
-          alt=""
+          alt="jeans"
         />
-        <h2>hrx</h2>
+        <!-- <h2>hrx</h2>
         <p>jeans</p>
         <h3>400</h3>
-        <button>add</button>
+        <button>add</button> -->
       </div>
     </div>
   </body>
 </html>
+
+<script>
+  let box = document.getElementById("box");
+
+  // let card = document.createElement("div");
+  // card.setAttribute("class", "card");
+
+  let brandName = document.createElement("h2");
+  brandName.innerText = "hrx";
+  brandName.setAttribute("class", "brand");
+
+  let type = document.createElement("p");
+  type.innerText = "jeans";
+  type.setAttribute("class", "type");
+
+  let price = document.createElement("h3");
+  price.innerText = "400";
+  pricer.setAttribute("class", "price");
+
+  let addbtn = document.createElement("button");
+  addbtn.setAttribute("addbtn");
+</script>
