@@ -385,20 +385,21 @@ let ecomData = [
     id: 43,
     image:
       "https://denverformen.com/cdn/shop/products/2_0ec34cbf-34f8-4f00-8224-c2a8a6abba4a_800x.jpg?v=1696932709",
-    brandName: "denver (sharukha khan brand)",
+    brandName: "denver (khan's brand)",
     type: "perfume",
     price: "525",
     count: 0,
   },
-  // {
-  //   id: 44,
-  //   images:
-  //     "https://bellavitaluxury.co.in/cdn/shop/products/CEOMAN-05_e036500c-95d6-4381-9180-36eec7a2eae7.jpg?v=1696231846&width=1946",
-  //   brandName: "bella vita",
-  //   type: "perfume",
-  //   price: "449",
-  //   count: 0,
-  // },
+  {
+    id: 44,
+    images:
+      "https://cdn.shopify.com/s/files/1/0745/0201/3236/products/8013-the-unholy-perfume-trio-2160x2160-fop.webp?v=1681904627&width=533",
+    brandName: "Dennislingo",
+    type: "perfume",
+    price: "659",
+    count: 0,
+  },
+
   {
     id: 45,
     image:

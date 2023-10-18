@@ -35,7 +35,7 @@ img {
 
 .brandName {
   text-transform: capitalize;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .type {
@@ -43,7 +43,7 @@ img {
 }
 
 .price {
-  font-size: 35px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -65,11 +65,10 @@ img {
   width: 100%;
   padding: 10px 0;
   font-size: 25px;
-  background-color: blue;
+  background-color: rgb(209, 28, 179);
   color: white;
-  border-color: blue;
+  border-color: rgb(182, 18, 45);
   cursor: pointer;
-  /* margin: 10px 0; */
   border-radius: 10px;
 }
 
