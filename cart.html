@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>online shopping</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./cart.css" />
     <link rel="stylesheet" href="./navbar.css" />
-    <script src="./data.jss"></script>
+    <title>cart</title>
   </head>
   <body>
     <div class="container">
       <!-- navbar -->
-      <!-- <div class="navbar">
+      <div class="navbar">
         <div class="left">
           <h1><a href="./">Vastralaya</a></h1>
         </div>
@@ -28,45 +27,17 @@
             </li>
           </ul>
         </div>
-      </div> -->
+      </div>
       <div id="container_items"></div>
     </div>
   </body>
 </html>
-<script type="module">
-  // navbar
 
-  let nav = document.createElement("div");
-  nav.setAttribute("class", "navBar");
+<script>
+  let cartData = JSON.parse(localStorage.getItem("cartData"));
 
-  let leftNav = document.createElement("a");
-  leftNav.innerText = "vastralya";
-  leftNav.setAttribute("href", "#");
-
-  let rightNav = document.createElement("div");
-  rightNav.setAttribute("class", "right");
-
-  let unorderList = document.createElement("ul");
-
-  let listItem = document.createElement("li");
-  listItem.setAttribute("a", "href");
-  listItem.innerText = "Profile";
-
-  let listItem2 = document.createElement("li");
-  listItem2.setAttribute("a", "href");
-  listItem2.innerText = "cart";
-
-  let listItem3 = document.createElement("li");
-  listItem3.setAttribute("a", "href");
-  listItem3.innerText = "login";
-
-  nav.append(leftNav, rightNav, listItem, listItem2, listItem3);
-
-  import { ecomData } from "./data.js";
-
-  ecomData.map(function (ele, idx, array) {
+  cartData.map(function (ele, idx, array) {
     let container_items = document.getElementById("container_items");
-
     let cards = document.createElement("div");
     cards.setAttribute("class", "cards");
 
@@ -93,12 +64,8 @@
     price.innerText = ele.price;
     price.setAttribute("class", "price");
 
-    let addToCart = document.createElement("button");
-    addToCart.innerText = "Add";
-    addToCart.setAttribute("class", "addButton");
-    addToCart.addEventListener("click", function () {
-      handleAddToCart(ele);
-    });
+    let count = document.createElement("h4");
+    count.innerText = `count : ${ele.count}`;
 
     let wishlistBtn = document.createElement("button");
     wishlistBtn.innerText = "💖";
@@ -107,7 +74,7 @@
     let btnDiv = document.createElement("div");
     btnDiv.setAttribute("class", "btnDiv");
 
-    btnDiv.append(wishlistBtn, addToCart);
+    btnDiv.append(count, wishlistBtn);
 
     contentDiv.append(brandName, type, price, btnDiv);
 
@@ -115,20 +82,4 @@
 
     container_items.append(cards);
   });
-
-  function handleAddToCart(ele) {
-    let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-
-    let existingData = cartData.find(function (element) {
-      return element.id === ele.id;
-    });
-
-    if (existingData) {
-      existingData.count++;
-    } else {
-      cartData.push(ele);
-    }
-
-    localStorage.setItem("cartData", JSON.stringify(cartData));
-  }
 </script>

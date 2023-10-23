@@ -7,7 +7,7 @@ let ecomData = [
     brandName: "HRX",
     type: "T-shirt",
     price: "599",
-    count: 0,
+    count: 1,
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ let ecomData = [
     brandName: "eyebolger-men",
     type: "T-shirt",
     price: "599",
-    count: 0,
+    count: 1,
   },
   {
     id: 3,
@@ -25,6 +25,7 @@ let ecomData = [
     brandName: "Triumph",
     type: "T-shirt",
     price: "499",
+    count: 1,
   },
   {
     id: 4,
@@ -33,7 +34,7 @@ let ecomData = [
     brandName: "vectormantra",
     type: "T-shirt",
     price: "599",
-    count: 0,
+    count: 1,
   },
 
   {
@@ -43,7 +44,7 @@ let ecomData = [
     brandName: "Redtape",
     type: "T-shirt",
     price: "766",
-    count: 0,
+    count: 1,
   },
   // SHORTS
 
@@ -53,7 +54,7 @@ let ecomData = [
     brandName: "jockey",
     type: "shorts",
     price: "899",
-    count: 0,
+    count: 1,
   },
   {
     id: 7,
@@ -62,7 +63,7 @@ let ecomData = [
     brandName: "stoney creek",
     type: "shorts",
     price: "399",
-    count: 0,
+    count: 1,
   },
   {
     id: 8,
@@ -71,7 +72,7 @@ let ecomData = [
     brandName: "worng ",
     type: "short",
     price: "588",
-    count: 0,
+    count: 1,
   },
   {
     id: 9,
@@ -79,7 +80,7 @@ let ecomData = [
     brandName: "The Air shorts",
     type: "short",
     price: "799",
-    count: 0,
+    count: 1,
   },
   {
     id: 10,
@@ -88,7 +89,7 @@ let ecomData = [
     brandName: "Jockey",
     type: "short",
     price: "599",
-    count: 0,
+    count: 1,
   },
   // JEANS FOR MEN
   {
@@ -98,7 +99,7 @@ let ecomData = [
     brandName: "Bagger trousers",
     type: "jean",
     price: "899",
-    count: 0,
+    count: 1,
   },
   {
     id: 12,
@@ -107,7 +108,7 @@ let ecomData = [
     brandName: "louis philipee",
     type: "jean",
     price: "1299",
-    count: 0,
+    count: 1,
   },
   {
     id: 13,
@@ -115,7 +116,7 @@ let ecomData = [
     brandName: "Baggy jeans",
     type: "jean",
     price: "973",
-    count: 0,
+    count: 1,
   },
   {
     id: 14,
@@ -123,7 +124,7 @@ let ecomData = [
     brandName: "Petter Inland",
     type: "jean",
     price: "1499",
-    count: 0,
+    count: 1,
   },
   {
     id: 15,
@@ -132,7 +133,7 @@ let ecomData = [
     brandName: "Voi jeans",
     type: "jean",
     price: "999",
-    count: 0,
+    count: 1,
   },
   {
     id: 16,
@@ -141,7 +142,7 @@ let ecomData = [
     brandName: "Bywenzai",
     type: "jena",
     price: "2012",
-    count: 0,
+    count: 1,
   },
   //JEANS FOR WOMAN
   {
@@ -151,7 +152,7 @@ let ecomData = [
     brandName: " Rise Jean",
     type: "women jean",
     price: "786",
-    count: 0,
+    count: 1,
   },
   {
     id: 18,
@@ -160,7 +161,7 @@ let ecomData = [
     brandName: "LBB",
     type: "women jean",
     price: "1877",
-    count: 0,
+    count: 1,
   },
   {
     id: 19,
@@ -169,7 +170,7 @@ let ecomData = [
     brandName: "union of denim",
     type: "woman jean",
     price: "2100",
-    count: 0,
+    count: 1,
   },
   {
     id: 20,
@@ -178,7 +179,7 @@ let ecomData = [
     brandName: "the lucky denim ",
     type: "woman jean",
     price: "1599",
-    count: 0,
+    count: 1,
   },
   //WATCH FOR ROLEX
   {
@@ -188,25 +189,25 @@ let ecomData = [
     brandName: "rolex golden ",
     type: "watch",
     price: "5500",
-    count: 0,
+    count: 1,
   },
   {
     id: 22,
     image:
       "https://static.toiimg.com/thumb/msid-71011251,width-1280,resizemode-4/71011251.jpg",
-    brandName: "Rolex Daytona Rainbow (virat brand)",
+    brandName: "Rolex Rainbow ",
     type: "watch",
     price: "450000",
-    count: 0,
+    count: 1,
   },
   {
     id: 23,
     image:
       "https://5.imimg.com/data5/ANDROID/Default/2022/7/XN/DB/IV/157084426/product-jpeg-500x500.jpg",
-    brandName: "multicolor rolex luxury",
+    brandName: "multicolor rolex ",
     type: "watch",
     price: "9999",
-    count: 0,
+    count: 1,
   },
   //NORMAL WATCHES
   {
@@ -216,7 +217,7 @@ let ecomData = [
     brandName: "analogue",
     type: "watch",
     price: "1999",
-    count: 0,
+    count: 1,
   },
   {
     id: 25,
@@ -225,7 +226,7 @@ let ecomData = [
     brandName: "titan",
     type: "watch",
     price: "1576",
-    count: 0,
+    count: 1,
   },
   // SMART WATCH
   {
@@ -234,7 +235,7 @@ let ecomData = [
     brandName: "fastrack",
     type: "smart watch",
     price: "2500",
-    count: 0,
+    count: 1,
   },
   {
     id: 27,
@@ -243,7 +244,7 @@ let ecomData = [
     brandName: "noise",
     type: "smart watch",
     price: "1999",
-    count: 0,
+    count: 1,
   },
   {
     id: 28,
@@ -251,7 +252,7 @@ let ecomData = [
     brandName: "crossBeats",
     type: "smart watch",
     price: "1299",
-    count: 0,
+    count: 1,
   },
   {
     id: 29,
@@ -260,7 +261,7 @@ let ecomData = [
     brandName: "apple",
     type: "samrt watch",
     price: "40910",
-    count: 0,
+    count: 1,
   },
   {
     id: 30,
@@ -269,7 +270,7 @@ let ecomData = [
     brandName: "firebolt",
     type: "smart watch",
     price: "2200",
-    count: 0,
+    count: 1,
   },
   {
     id: 31,
@@ -278,7 +279,7 @@ let ecomData = [
     brandName: "pebble cosmos",
     type: "samrt watch",
     price: "2600",
-    count: 0,
+    count: 1,
   },
   //SHOES
   {
@@ -288,7 +289,7 @@ let ecomData = [
     brandName: "bruton",
     type: "shoes",
     price: "800",
-    count: 0,
+    count: 1,
   },
   {
     id: 33,
@@ -297,7 +298,7 @@ let ecomData = [
     brandName: "aadi",
     type: "shoes",
     price: "999",
-    count: 0,
+    count: 1,
   },
   {
     id: 34,
@@ -306,16 +307,16 @@ let ecomData = [
     brandName: "adidas",
     type: "shoes",
     price: "4800",
-    count: 0,
+    count: 1,
   },
   {
     id: 35,
     image:
       "https://media.istockphoto.com/id/172417586/photo/elegant-black-leather-shoes.jpg?s=612x612&w=0&k=20&c=c_tTljwbu2m0AGxwb27NxCgG0Y2Cv-C4v8q6V36RYbw=",
-    brandName: "elephant black leather",
+    brandName: "elephant leather",
     type: "shoes",
     price: "1399",
-    count: 0,
+    count: 1,
   },
   {
     id: 36,
@@ -324,7 +325,7 @@ let ecomData = [
     brandName: "san diego",
     type: "shoes",
     price: "1799",
-    count: 0,
+    count: 1,
   },
   {
     id: 37,
@@ -333,7 +334,7 @@ let ecomData = [
     brandName: "barefoot",
     type: "shoes",
     price: "1466",
-    count: 0,
+    count: 1,
   },
   {
     id: 38,
@@ -342,7 +343,7 @@ let ecomData = [
     brandName: "spark",
     type: "shoes",
     price: "1600",
-    count: 0,
+    count: 1,
   },
   {
     id: 39,
@@ -351,7 +352,7 @@ let ecomData = [
     brandName: "hoka",
     type: "shoes",
     price: "9000",
-    count: 0,
+    count: 1,
   },
   {
     id: 40,
@@ -360,7 +361,7 @@ let ecomData = [
     brandName: "DesiDime",
     type: "shoes",
     price: "14000",
-    count: 0,
+    count: 1,
   },
   //PERFUME
   {
@@ -370,7 +371,7 @@ let ecomData = [
     brandName: "wildStone",
     type: "perfume",
     price: "299",
-    count: 0,
+    count: 1,
   },
   {
     id: 42,
@@ -379,25 +380,25 @@ let ecomData = [
     brandName: "bella vita",
     type: "perfume",
     price: "515",
-    count: 0,
+    count: 1,
   },
   {
     id: 43,
     image:
       "https://denverformen.com/cdn/shop/products/2_0ec34cbf-34f8-4f00-8224-c2a8a6abba4a_800x.jpg?v=1696932709",
-    brandName: "denver (khan's brand)",
+    brandName: "denver",
     type: "perfume",
     price: "525",
-    count: 0,
+    count: 1,
   },
   {
     id: 44,
     images:
       "https://cdn.shopify.com/s/files/1/0745/0201/3236/products/8013-the-unholy-perfume-trio-2160x2160-fop.webp?v=1681904627&width=533",
-    brandName: "Dennislingo",
+    brandName: "Attire",
     type: "perfume",
     price: "659",
-    count: 0,
+    count: 1,
   },
 
   {
@@ -407,7 +408,7 @@ let ecomData = [
     brandName: "yardley",
     type: "perfume",
     price: "650",
-    count: 0,
+    count: 1,
   },
   // SHIRTS
   {
@@ -417,7 +418,7 @@ let ecomData = [
     brandName: "roadster",
     type: "shirt",
     price: "495",
-    count: 0,
+    count: 1,
   },
   {
     id: 47,
@@ -426,7 +427,7 @@ let ecomData = [
     brandName: "Urban shirt",
     type: "shirt",
     price: "1199",
-    count: 0,
+    count: 1,
   },
   {
     id: 48,
@@ -435,25 +436,25 @@ let ecomData = [
     brandName: "Roadster",
     type: "shirt",
     price: "539",
-    count: 0,
+    count: 1,
   },
   {
     id: 49,
     image:
       "https://img.tatacliq.com/images/i8/437Wx649H/MP000000014694409_437Wx649H_202209291937211.jpeg",
-    brandName: "Royal Enflied blue",
+    brandName: "Royal blue",
     type: "shirt",
     price: "4000",
-    count: 0,
+    count: 1,
   },
   {
     id: 50,
     image:
       "https://assets.ajio.com/medias/sys_master/root/20230602/BHbE/6479732342f9e729d714c57b/-473Wx593H-462323964-green-MODEL.jpg",
-    brandName: "DENNISLINGO PREMIUM ATTIRE",
+    brandName: "ATTIRE",
     type: "shirt",
     price: "555",
-    count: 0,
+    count: 1,
   },
 ];
 

@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  height: 100px;
+  background-color: rgb(209, 28, 179);
+  color: white;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
