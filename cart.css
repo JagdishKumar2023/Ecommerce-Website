@@ -26,3 +26,31 @@
   display: flex;
   justify-content: center;
 }
+
+#container_items {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.items {
+  border: 1px solid red;
+  width: 300px;
+}
+
+.imageDiv {
+  height: 300px;
+  width: 100%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.itemsDetails {
+  padding: 10px 20px;
+}

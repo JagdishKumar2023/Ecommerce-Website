@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <!-- navbar -->
-      <div class="navbar">
+      <div id="navbar">
         <div class="left">
           <h1><a href="./">Vastralaya</a></h1>
         </div>
@@ -36,50 +36,43 @@
 <script>
   let cartData = JSON.parse(localStorage.getItem("cartData"));
 
-  cartData.map(function (ele, idx, array) {
+  cartData.map(function (ele, id, array) {
     let container_items = document.getElementById("container_items");
-    let cards = document.createElement("div");
-    cards.setAttribute("class", "cards");
 
-    let contentDiv = document.createElement("div");
-    contentDiv.setAttribute("class", "contentDiv");
+    let items = document.createElement("div");
+    items.setAttribute("class", "items");
 
-    let imgDiv = document.createElement("div");
-    imgDiv.setAttribute("class", "imgDiv");
+    let imageDiv = document.createElement("div");
+    imageDiv.setAttribute("class", "imageDiv");
 
     let imgTag = document.createElement("img");
     imgTag.setAttribute("src", ele.image);
 
-    imgDiv.append(imgTag);
+    imageDiv.append(imgTag);
 
-    let brandName = document.createElement("h2");
+    // details
+
+    let itemsDetails = document.createElement("div");
+    itemsDetails.setAttribute("class", "itemsDetails");
+
+    let brandName = document.createElement("h1");
     brandName.innerText = ele.brandName;
-    brandName.setAttribute("class", "brandName");
 
-    let type = document.createElement("h4");
+    let type = document.createElement("h2");
     type.innerText = ele.type;
-    type.setAttribute("class", "type");
 
-    let price = document.createElement("p");
+    let price = document.createElement("h2");
     price.innerText = ele.price;
-    price.setAttribute("class", "price");
 
-    let count = document.createElement("h4");
-    count.innerText = `count : ${ele.count}`;
+    let count = document.createElement("h3");
+    count.innerText = ele.count;
 
     let wishlistBtn = document.createElement("button");
     wishlistBtn.innerText = "💖";
-    wishlistBtn.setAttribute("class", "wishlist");
 
-    let btnDiv = document.createElement("div");
-    btnDiv.setAttribute("class", "btnDiv");
+    itemsDetails.append(brandName, type, price, count, wishlistBtn);
 
-    btnDiv.append(count, wishlistBtn);
-
-    contentDiv.append(brandName, type, price, btnDiv);
-
-    cards.append(imgDiv, contentDiv);
-
-    container_items.append(cards);
+    items.append(imageDiv, itemsDetails);
+    container_items.append(items);
   });
 </script>

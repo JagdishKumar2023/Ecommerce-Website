@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="container">
+      <div id="navbar"></div>
       <!-- navbar -->
       <!-- <div class="navbar">
         <div class="left">
@@ -29,19 +30,30 @@
           </ul>
         </div>
       </div> -->
-      <div id="container_items"></div>
+      <div id="container_items">
+        <a href=""></a>
+        <h1>
+          <a href="./cart.html"></a>
+        </h1>
+      </div>
     </div>
   </body>
 </html>
 <script type="module">
   // navbar
 
-  let nav = document.createElement("div");
-  nav.setAttribute("class", "navBar");
+  let nav = document.getElementById("navbar");
+
+  let leftDiv = document.createElement("div");
 
   let leftNav = document.createElement("h1");
-  leftNav.innerText = "vastralaya";
-  leftNav.setAttribute("a", "href");
+
+  let brandNameAnchorTag = document.createElement("a");
+  brandNameAnchorTag.setAttribute("href", "./cart.html");
+  brandNameAnchorTag.innerText = "vastralaya";
+
+  leftNav.append(brandNameAnchorTag);
+  leftDiv.append(leftNav);
 
   let rightNav = document.createElement("div");
   rightNav.setAttribute("class", "right");
@@ -49,18 +61,35 @@
   let unorderList = document.createElement("ul");
 
   let listItem = document.createElement("li");
-  listItem.setAttribute("a", "href");
-  listItem.innerText = "profile";
+  let profileAnchorTag = document.createElement("a");
+  profileAnchorTag.setAttribute("href", "#");
+  profileAnchorTag.innerText = "profile";
+
+  listItem.append(profileAnchorTag);
 
   let listItem2 = document.createElement("li");
-  listItem2.setAttribute("a", "href");
-  listItem2.innerText = "cart";
+  let cartAnchorTag = document.createElement("a");
+
+  let cartSpanTag = document.createElement("span");
+  cartSpanTag.setAttribute("id", "cartTotal");
+
+  cartAnchorTag.setAttribute("href", "/cart.html");
+  cartAnchorTag.innerText = "cart";
+
+  cartAnchorTag.append(cartSpanTag);
+
+  listItem2.append(cartAnchorTag);
 
   let listItem3 = document.createElement("li");
-  listItem3.setAttribute("a", "href");
-  listItem3.innerText = "login";
+  let loginAnchorTag = document.createElement("a");
+  loginAnchorTag.setAttribute("href", "#");
+  loginAnchorTag.innerText = "login";
+  listItem3.append(loginAnchorTag);
 
-  nav.append(leftNav, rightNav, listItem, listItem2, listItem3);
+  unorderList.append(listItem, listItem2, listItem3);
+  rightNav.append(unorderList);
+
+  nav.append(leftDiv, rightNav);
 
   import { ecomData } from "./data.js";
 
@@ -130,5 +159,19 @@
     }
 
     localStorage.setItem("cartData", JSON.stringify(cartData));
+
+    // to show count value in cart in navbar
+
+    let totalCartValue = cartData.reduce(function (acc, ele, id, array) {
+      return acc + ele.count;
+    }, 0);
+
+    udpateCartDOM(totalCartValue);
+    console.log(totalCartValue);
+  }
+
+  function udpateCartDOM(totalCartValue) {
+    let cartSpanTag = document.getElementById("cartTotal");
+    cartSpanTag.innerText = totalCartValue;
   }
 </script>

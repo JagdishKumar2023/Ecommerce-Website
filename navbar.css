@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-.navbar {
-  /* border: 1px solid red; */
+#navbar {
+  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
