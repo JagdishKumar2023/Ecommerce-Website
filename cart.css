@@ -54,3 +54,13 @@ img {
 .itemsDetails {
   padding: 10px 20px;
 }
+
+.incDecBtnDiv {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.incDecBtnDiv > button {
+  padding: 10px;
+}

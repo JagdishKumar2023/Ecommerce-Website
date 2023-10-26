@@ -42,6 +42,8 @@
 <script type="module">
   // navbar
 
+  let cartCount = JSON.parse(localStorage.getItem("cartCount"));
+
   let nav = document.getElementById("navbar");
 
   let leftDiv = document.createElement("div");
@@ -72,6 +74,7 @@
 
   let cartSpanTag = document.createElement("span");
   cartSpanTag.setAttribute("id", "cartTotal");
+  cartSpanTag.innerText = cartCount;
 
   cartAnchorTag.setAttribute("href", "/cart.html");
   cartAnchorTag.innerText = "cart";
@@ -95,6 +98,9 @@
 
   ecomData.map(function (ele, idx, array) {
     let container_items = document.getElementById("container_items");
+
+    let cardsDiv = document.createElement("div");
+    cardsDiv.setAttribute("class", "cardsDiv");
 
     let cards = document.createElement("div");
     cards.setAttribute("class", "cards");
@@ -142,11 +148,14 @@
 
     cards.append(imgDiv, contentDiv);
 
-    container_items.append(cards);
+    cardsDiv.append(cards);
+
+    container_items.append(cardsDiv);
   });
 
   function handleAddToCart(ele) {
     let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    let cartCount = JSON.parse(localStorage.getItem("cartCount"));
 
     let existingData = cartData.find(function (element) {
       return element.id === ele.id;
@@ -166,8 +175,10 @@
       return acc + ele.count;
     }, 0);
 
-    udpateCartDOM(totalCartValue);
-    console.log(totalCartValue);
+    localStorage.setItem("cartCount", JSON.stringify(totalCartValue));
+
+    udpateCartDOM(cartCount);
+    // console.log(totalCartValue);
   }
 
   function udpateCartDOM(totalCartValue) {

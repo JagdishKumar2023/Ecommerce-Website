@@ -7,14 +7,30 @@
 #container_items {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  gap: 50px;
   margin: 50px 40px;
+}
+
+.cardsDiv {
+  /* border: 1px solid red; */
+  /* padding: 25px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  /* margin: 10px; */
 }
 
 .cards {
   border: 1px solid black;
   /* height: 500px; */
   /* width: ;/ */
+}
+
+.cards:hover {
+  width: 112%;
+  height: 112%;
+  transition: all ease 2s;
 }
 
 .contentDiv {

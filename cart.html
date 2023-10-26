@@ -20,7 +20,7 @@
               <a href="#">Profile</a>
             </li>
             <li>
-              <a href="./cart.html">Cart</a>
+              <a href="./cart.html">Cart <span id="cartCount"></span></a>
             </li>
             <li>
               <a href="#">Login</a>
@@ -35,6 +35,11 @@
 
 <script>
   let cartData = JSON.parse(localStorage.getItem("cartData"));
+  let cartCount = JSON.parse(localStorage.getItem("cartCount"));
+  console.log(cartData);
+
+  let cartCountTag = document.getElementById("cartCount");
+  cartCountTag.innerText = cartCount;
 
   cartData.map(function (ele, id, array) {
     let container_items = document.getElementById("container_items");
@@ -67,12 +72,40 @@
     let count = document.createElement("h3");
     count.innerText = ele.count;
 
+    let incDecBtnDiv = document.createElement("div");
+    incDecBtnDiv.setAttribute("class", "incDecBtnDiv");
+
+    let incBtn = document.createElement("button");
+    incBtn.innerText = "+";
+    incBtn.addEventListener("click", function () {
+      increamentCount(ele.id);
+    });
+
+    let decBtn = document.createElement("button");
+    decBtn.innerText = "-";
+
+    incDecBtnDiv.append(decBtn, count, incBtn);
+
     let wishlistBtn = document.createElement("button");
     wishlistBtn.innerText = "💖";
 
-    itemsDetails.append(brandName, type, price, count, wishlistBtn);
+    itemsDetails.append(brandName, type, price, wishlistBtn, incDecBtnDiv);
 
     items.append(imageDiv, itemsDetails);
     container_items.append(items);
   });
+
+  function increamentCount(id) {
+    let updatedCartData = cartData.map(function (ele, idx, array) {
+      // console.log(id);
+      if (ele.id === id) {
+        console.log(id);
+        return { ...ele, count: ele.count + 1 };
+      }
+      return ele;
+    });
+
+    localStorage.setItem("cartData", JSON.stringify(updatedCartData));
+    location.reload();
+  }
 </script>
