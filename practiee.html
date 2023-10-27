@@ -3,46 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>online shopping</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./navbar.css" />
-    <script src="./data.jss"></script>
+    <title>Document</title>
   </head>
   <body>
-    <div class="container">
-      <div id="navbar"></div>
-      <!-- navbar -->
-      <!-- <div class="navbar">
-        <div class="left">
-          <h1><a href="./">Vastralaya</a></h1>
-        </div>
-        <div class="right">
-          <ul>
-            <li>
-              <a href="#">Profile</a>
-            </li>
-            <li>
-              <a href="./cart.html">Cart</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-      <div id="container_items">
-        <a href=""></a>
-        <h1>
-          <a href="./cart.html"></a>
-        </h1>
-      </div>
-    </div>
+    <div class="container"></div>
+    <div id="navbar"></div>
   </body>
 </html>
-<script type="module">
-  // navbar
 
-  let cartCount = JSON.parse(localStorage.getItem("cartCount"));
+<script type="module">
+  //   navbar
+
+  let cartCount = JSON.parse(localStorage.getItem("cartCout"));
 
   let nav = document.getElementById("navbar");
 
@@ -74,10 +46,7 @@
 
   let cartSpanTag = document.createElement("span");
   cartSpanTag.setAttribute("id", "cartTotal");
-  cartSpanTag.innerText = cartCount;
-
-  cartAnchorTag.setAttribute("href", "/cart.html");
-  cartAnchorTag.innerText = "cart";
+  cartSpanTag.innerText = "cart";
 
   cartAnchorTag.append(cartSpanTag);
 
@@ -93,7 +62,7 @@
   unorderList.append(listItem, listItem2, listItem3);
   rightNav.append(unorderList);
 
-  nav.append(leftDiv, rightNav);
+  nav.append(unorderList);
 
   import { ecomData } from "./data.js";
 
@@ -104,10 +73,10 @@
     cardsDiv.setAttribute("class", "cardsDiv");
 
     let cards = document.createElement("div");
-    cards.setAttribute("class", "cards");
+    cards.setAttribute("class", "cardsDiv");
 
     let contentDiv = document.createElement("div");
-    contentDiv.setAttribute("class", "contentDiv");
+    contentDiv.setAttribute("class", "cards");
 
     let imgDiv = document.createElement("div");
     imgDiv.setAttribute("class", "imgDiv");
@@ -155,34 +124,30 @@
   });
 
   function handleAddToCart(ele) {
-    let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-    let cartCount = JSON.parse(localStorage.getItem("cartCount"));
+    let cardData = JSON.parse(localStorage.getItem("cardData")) || [];
+    let cartCount = JSON.parse(Location.getItem("cartCount"));
 
-    let existingData = cartData.find(function (element) {
+    let existingData = cardData.find(function (element) {
       return element.id === ele.id;
     });
 
     if (existingData) {
       existingData.count++;
     } else {
-      cartData.push(ele);
+      cardData.push(ele);
     }
+    localStorage.setItem("cartData", JSON.stringify(cardData));
 
-    localStorage.setItem("cartData", JSON.stringify(cartData));
-
-    // to show count value in cart in navbar
-
-    let totalCartValue = cartData.reduce(function (acc, ele, id, array) {
+    let totalCartValue = cardData.reduc(function (acc, ele, id, array) {
       return acc + ele.count;
     }, 0);
 
-    localStorage.setItem("cartCount", JSON.stringify(totalCartValue));
+    localStorage.setItem("cartcount", JSON.stringify(totalCartValue));
 
-    udpateCartDOM(cartCount);
-    // console.log(totalCartValue);
+    updateCartDM(cartCount);
   }
 
-  function udpateCartDOM(totalCartValue) {
+  function updateCartDM(totalCartValue) {
     let cartSpanTag = document.getElementById("cartTotal");
     cartSpanTag.innerText = totalCartValue;
   }
