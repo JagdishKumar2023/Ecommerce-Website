@@ -3,41 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>online shopping</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./navbar.css" />
-    <script src="./data.jss"></script>
+    <title>Document</title>
   </head>
-  <body>
-    <div class="container">
-      <div id="navbar"></div>
-      <!-- navbar -->
-      <!-- <div class="navbar">
-        <div class="left">
-          <h1><a href="./">Vastralaya</a></h1>
-        </div>
-        <div class="right">
-          <ul>
-            <li>
-              <a href="#">Profile</a>
-            </li>
-            <li>
-              <a href="./cart.html">Cart</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-      <div id="container_items">
-        <a href=""></a>
-        <h1>
-          <a href="./cart.html"></a>
-        </h1>
-      </div>
-    </div>
-  </body>
+  <body></body>
 </html>
 <script type="module">
   // navbar
@@ -178,11 +146,11 @@
 
     localStorage.setItem("cartCount", JSON.stringify(totalCartValue));
 
-    upDataCartDOM(cartCount);
+    udpateCartDOM(cartCount);
     // console.log(totalCartValue);
   }
 
-  function upDataCartDOM(totalCartValue) {
+  function udpateCartDOM(totalCartValue) {
     let cartSpanTag = document.getElementById("cartTotal");
     cartSpanTag.innerText = totalCartValue;
   }

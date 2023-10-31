@@ -3,52 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>online shopping</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./navbar.css" />
-    <script src="./data.jss"></script>
+    <title>Document</title>
   </head>
-  <body>
-    <div class="container">
-      <div id="navbar"></div>
-      <!-- navbar -->
-      <!-- <div class="navbar">
-        <div class="left">
-          <h1><a href="./">Vastralaya</a></h1>
-        </div>
-        <div class="right">
-          <ul>
-            <li>
-              <a href="#">Profile</a>
-            </li>
-            <li>
-              <a href="./cart.html">Cart</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-      <div id="container_items">
-        <a href=""></a>
-        <h1>
-          <a href="./cart.html"></a>
-        </h1>
-      </div>
-    </div>
-  </body>
+  <body></body>
 </html>
 <script type="module">
-  // navbar
-
   let cartCount = JSON.parse(localStorage.getItem("cartCount"));
 
   let nav = document.getElementById("navbar");
 
   let leftDiv = document.createElement("div");
 
-  let leftNav = document.createElement("h1");
+  let leftNav = document.createElement("div");
 
   let brandNameAnchorTag = document.createElement("a");
   brandNameAnchorTag.setAttribute("href", "./cart.html");
@@ -64,7 +30,6 @@
 
   let listItem = document.createElement("li");
   let profileAnchorTag = document.createElement("a");
-  profileAnchorTag.setAttribute("href", "#");
   profileAnchorTag.innerText = "profile";
 
   listItem.append(profileAnchorTag);
@@ -72,7 +37,11 @@
   let listItem2 = document.createElement("li");
   let cartAnchorTag = document.createElement("a");
 
-  let cartSpanTag = document.createElement("span");
+  let cartSpanTag = document.createElement("li");
+  cartSpanTag.setAttribute("id", "cartTolal");
+  cartSpanTag.innerText = cartCount;
+
+  cartSpanTag = document.createElement("span");
   cartSpanTag.setAttribute("id", "cartTotal");
   cartSpanTag.innerText = cartCount;
 
@@ -107,13 +76,10 @@
     cards.setAttribute("class", "cards");
 
     let contentDiv = document.createElement("div");
-    contentDiv.setAttribute("class", "contentDiv");
+    contentDiv.setAttribute("class", "imgDiv");
 
-    let imgDiv = document.createElement("div");
-    imgDiv.setAttribute("class", "imgDiv");
-
-    let imgTag = document.createElement("img");
-    imgTag.setAttribute("src", ele.image);
+    let imgDiv = document.createElement("img");
+    imgDiv.setAttribute("scr", ele.image);
 
     imgDiv.append(imgTag);
 
@@ -125,9 +91,9 @@
     type.innerText = ele.type;
     type.setAttribute("class", "type");
 
-    let price = document.createElement("p");
-    price.innerText = ele.price;
-    price.setAttribute("class", "price");
+    let price = document.createElement("h4");
+    type.innerText = ele.price;
+    type.setAttribute("class", "price");
 
     let addToCart = document.createElement("button");
     addToCart.innerText = "Add";
@@ -138,18 +104,13 @@
 
     let wishlistBtn = document.createElement("button");
     wishlistBtn.innerText = "💖";
-    wishlistBtn.setAttribute("class", "wishlist");
-
-    let btnDiv = document.createElement("div");
-    btnDiv.setAttribute("class", "btnDiv");
+    wishlistBtn.setAttribute("class", "btnDiv");
 
     btnDiv.append(wishlistBtn, addToCart);
 
     contentDiv.append(brandName, type, price, btnDiv);
 
     cards.append(imgDiv, contentDiv);
-
-    cardsDiv.append(cards);
 
     container_items.append(cardsDiv);
   });
@@ -170,16 +131,13 @@
 
     localStorage.setItem("cartData", JSON.stringify(cartData));
 
-    // to show count value in cart in navbar
-
-    let totalCartValue = cartData.reduce(function (acc, ele, id, array) {
+    let totalCartValue = cartData.reduce(function (acc, ele, idx, array) {
       return acc + ele.count;
     }, 0);
 
-    localStorage.setItem("cartCount", JSON.stringify(totalCartValue));
+    localStorage.setItem("cartCount", Json.stringify(totalCartValue));
 
     upDataCartDOM(cartCount);
-    // console.log(totalCartValue);
   }
 
   function upDataCartDOM(totalCartValue) {
