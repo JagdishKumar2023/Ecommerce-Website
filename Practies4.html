@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>prctices</title>
   </head>
   <body></body>
 </html>
@@ -80,5 +80,68 @@
     imgTag.setAttribute("src", ele.image);
 
     imgDiv.append(imgTag);
+
+    let brandName = document.createElement("h2");
+    brandName.innerText = ele.brandName;
+    brandName.setAttribute("src", "brandName");
+
+    let type = document.createElement("h4");
+    type.innerText = ele.type;
+    type.setAttribute("class", "type");
+
+    let price = document.createElement("p");
+    price.innerText = ele.price;
+    price.setAttribute("class", "price");
+
+    let addToCart = document.createElement("button");
+    addToCart.innerText = ele.type;
+    addToCart.setAttribute("class", "type");
   });
+
+  let wishlistBtn = document.createElement("button");
+  wishlistBtn.innerText = "💖";
+  wishlistBtn.setAttribute("class", "btnDiv");
+
+  let btnDiv = document.createElement("div");
+  btnDiv.setAttribute("class", "btnDiv");
+
+  btnDiv.append(wishlistBtn, addToCart);
+
+  contentDiv.append(brandName, type, price, btnDiv);
+
+  cards.append(brandName, type, price, btnDiv);
+
+  cards.append(imgDiv, contentDiv);
+
+  cardsDiv.append(cardsDiv);
+
+  container_items.append(cardsDiv);
+
+  function handleAddToCart(ele) {
+    let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    let cartCount = JSON.parse(localStorage.getItem("cartCount"));
+
+    let existingData = cartData.find(function (element) {
+      return element.id === ele.id;
+    });
+
+    if (existingData) {
+      existingData.count++;
+    } else {
+      cartData.push(ele);
+    }
+
+    localStorage.setItem("catData", JSON.stringify(cartData));
+
+    let totalCartValue = cartData.reduce(function (acc, ele, id, array) {
+      return acc + ele.count;
+    }, 0);
+
+    localStorage.setItem("cartCount", JSON.stringify(totalCartValue));
+  }
+
+  function upDataCartDOM(totalCartValue) {
+    let cartSpanTag = document.getElementById("cartTotal");
+    cartSpanTag.innerText = totalCartValue;
+  }
 </script>

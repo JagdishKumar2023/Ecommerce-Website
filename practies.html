@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script type="module">
+  let cartCount = JSON.parse(localStorage.getItem("cartCount"));
+
+  let nav = document.getElementById("navbar");
+
+  let leftDiv = document.createElement("div");
+
+  let leftNav = document.createElement("h1");
+
+  let brandNameAnchorTag = document.createElement("a");
+  brandNameAnchorTag.setAttribute("href", "./cart.html");
+  brandNameAnchorTag.innerText = "vastralaya";
+
+  leftNav.append(brandNameAnchorTag);
+  leftDiv.append(leftNav);
+
+  let rightNav = document.createElement("div");
+  rightNav.setAttribute("class", "right");
+
+  let unorderList = document.createElement("ul");
+
+  let listItem = document.createElement("li");
+  let profileAnchorTag = document.createElement("a");
+  profileAnchorTag.setAttribute("href", "#");
+  profileAnchorTag.innerText = "profile";
+
+  listItem.append(profileAnchorTag);
+
+  let listItem2 = document.createElement("li");
+  cartSpanTag = document.createElement("a");
+
+  let cartSpanTag = document.createElement("span");
+  cartSpanTag.setAttribute("id", "cartTotal");
+  cartSpanTag.innerText = cartCount;
+
+  cartAnchorTag.setAttribute("href", "./cart.html");
+  cartAnchorTag.innerText = "cart";
+</script>
